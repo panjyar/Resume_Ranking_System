@@ -1,7 +1,6 @@
 __pycache__/
 venv_name/
 testdata/
-assets/
 config.py
 client.json
 

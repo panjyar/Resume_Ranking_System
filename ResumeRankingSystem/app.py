@@ -57,7 +57,7 @@ resume_uploaded = False
 from Job_post import job_post
 app.register_blueprint(job_post,url_prefix="/HR1")
 
-###Spacy model
+###Spacy model loadling
 print("Loading Resume Parser model...")
 nlp = spacy.load('assets/ResumeModel/output/model-best')
 print("Resune Parser model loaded")
