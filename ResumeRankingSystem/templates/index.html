@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+Resume Ranking System
+{% endblock %}
+
+{% block Addnav %}
+<li class="nav-item active">
+  <a class="nav-link" href="/HR">HR Team</a>
+</li>
+{% endblock %}
+
+{% block styleInclude %}
+<style>
+  
+  .main_card {
+    margin-top: 50px;
+    z-index: 10;
+  }
+
+  .hh {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .sign_in {
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #007bff; /* Changed color to blue */
+    color: white;
+    width: 60%;
+    transition: all 0.3s ease; /* Added transition effect */
+  }
+
+  /* Added hover effect */
+  .sign_in:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Move button 2px up on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+  }
+
+  @media screen and (min-width: 992px) {
+    .sign_in {
+      width: 60%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    .sign_in {
+      width: 40%;
+    }
+  }
+
+  @media screen and (min-width: 300px) {
+    .main_card {
+      margin-top: 30px;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-12 main_card">
+        <h1 class="text-center mt-4 hh">Resume Ranking System</h1>
+        <a href="/login" class="btn btn-lg btn-primary mt-5 sign_in mx-auto d-block">
+          <i class="fab fa-google me-4"></i>Login With Google
+        </a>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <img class="img-fluid mx-auto d-block" src="{{ url_for('static',filename='images/JobSearch.jpg') }}" />
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

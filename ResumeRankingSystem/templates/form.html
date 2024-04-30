@@ -1,0 +1,77 @@
+<style>
+  body {
+    background-color: #f0f0f0; /* Set background color */
+    font-family: Arial, sans-serif; /* Set font family */
+  }
+
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Set background color for form container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for a better look */
+    max-width: 400px; /* Limit form width */
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 20px; /* Add space below paragraph */
+    font-size: 18px; /* Increase font size */
+    color: #333; /* Set text color */
+  }
+
+  input[type="number"] {
+    width: 100%; /* Set input width to full */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Add space below input */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    transition: border-color 0.3s ease; /* Add transition effect */
+  }
+
+  input[type="number"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+  }
+
+  input[type="submit"] {
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+  }
+
+  /* Apply media query for smaller screens */
+  @media screen and (max-width: 600px) {
+    .form-container {
+      max-width: 80%; /* Reduce max width for smaller screens */
+    }
+  }
+</style>
+
+<html>
+  <body>
+    <div class="form-container">
+      <form method="post">
+        <p>What is your unique HR ID?</p>
+        <input type="number" name="response" placeholder="Enter your HR Number Id" />
+        <input type="submit" value="Submit" />
+      </form>
+      {% if message %}
+      <p>{{ message }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
