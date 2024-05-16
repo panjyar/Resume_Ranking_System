@@ -40,20 +40,23 @@ The system is composed of several components:
 ## Installation
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/your-username/resume-ranking-nlp.git
+   git clone[ https://github.com/your-username/resume-ranking-nlp.git](https://github.com/panjyar/Resume_Ranking_System.git)
    cd resume-ranking-nlp
 
 2. **Set Up Virtual Environment**
-   python -m venv env
-   source env/bin/activate   # On Windows use `env\Scripts\activate`
-3. **Install Dependencies**
+   ```sh
+    python -m venv env
+    source env/bin/activate   # On Windows use `env\Scripts\activate`
+4. **Install Dependencies**
+   ```sh
    pip install -r requirements.txt
-4. **Set Up Environment Variables**
+5. **Set Up Environment Variables**
+   ```sh
     Create a .env file in the project root directory and add your Google OAuth credentials and MongoDB URI:
     GOOGLE_CLIENT_ID=your_google_client_id
     GOOGLE_CLIENT_SECRET=your_google_client_secret
     MONGO_URI=your_mongodb_uri
-5.  **Run the Application**
+7.  **Run the Application**
      flask run
     
 ## Implementation
